@@ -1,3 +1,4 @@
+import { SidebarModule } from './shared/sidebar/sidebar.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,7 +13,8 @@ import { HeaderModule } from './shared/header/header.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    SidebarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
