@@ -7,7 +7,17 @@ import {
 
 const routes: Routes = [
   {
-    path: 'angular',
+    path: 'dashboard',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'module',
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        exposedModule: './angularMFE'
+      })
+        .then((m: any) => m.AppModule)
+  },
+  {
+    path: '',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',

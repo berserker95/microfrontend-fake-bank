@@ -14,8 +14,73 @@
   <i class="fa-solid fa-magnifying-glass"></i>
   <div class="flex flex-col justify-between mx-[auto] w-[100%]">
     <app-header></app-header>
-    <div class="bg-gray_100 flex flex-row md:flex-wrap sm:flex-wrap font-inter items-center mx-[auto] w-[100%] common-row">
-    <app-sidebar></app-sidebar>
+    <div class="bg-gray_100 flex flex-row md:flex-wrap sm:flex-wrap font-inter items-start mx-[auto] w-[100%] common-row">
+      <aside class="flex flex-col sm:hidden bg-white_A700 border-solid pt-6">
+        <div
+          class="flex flex-row gap-[20px] p-[17px] w-[100%] items-center cursor-pointer"
+          routerLink="/dashboard"
+          routerLinkActive="active"
+        >
+          <img
+            class="flex-shrink-0 md:h-[24px] h-[26px] max-w-[100%] md:w-[24px] w-[26px]"
+            src="../assets/images/home-icon.svg"
+            alt="Dashboard icon"
+          />
+          <p
+            class="flex-grow font-inter font-medium text-[18px] text-bluegray_400 text-left"
+          >
+            Dashboard
+          </p>
+        </div>
+        <div
+          class="flex flex-row gap-[20px] p-[17px] w-[100%] items-center cursor-pointer"
+        >
+          <img
+            class="flex-shrink-0 md:h-[24px] h-[26px] max-w-[100%] md:w-[24px] w-[26px]"
+            src="../assets/images/credit-cards-icon.svg"
+            alt="Transactions icon"
+          />
+          <p
+            class="flex-grow font-inter font-medium text-[18px] text-bluegray_400 text-left"
+          >
+            Transactions
+          </p>
+        </div>
+        <div
+          class="flex flex-row gap-[20px] p-[17px] w-[100%] items-center cursor-pointer"
+        >
+          <img
+            class="flex-shrink-0 md:h-[24px] h-[26px] max-w-[100%] md:w-[24px] w-[26px]"
+            src="../assets/images/credit-cards-icon.svg"
+            alt="Credit cards icon"
+          />
+          <p
+            class="flex-grow font-inter font-medium text-[18px] text-bluegray_400 text-left"
+          >
+            Credit Cards
+          </p>
+        </div>
+      </aside>
+
+      <aside class=" flex-col items-center w-[60px] gap-5 pl-2 pr-2 hidden sm:flex bg-white_A700 border-solid pt-6">
+        <img
+          class="flex-shrink-0 cursor-pointer h-[24px] max-w-[100%] w-[24px]"
+          src="../assets/images/home-icon.svg"
+          alt="Dashboard icon"
+        >
+
+        <img
+        class="flex-shrink-0 cursor-pointer h-[24px] max-w-[100%] w-[24px]"
+          src="../assets/images/transactions-icon.svg"
+          alt="Transactions icon"
+        />
+
+        <img
+        class="flex-shrink-0 cursor-pointer h-[24px] max-w-[100%] w-[24px]"
+          src="../assets/images/credit-cards-icon.svg"
+          alt="Credit cards icon"
+        />
+      </aside>
     <router-outlet></router-outlet>
     </div>
   </div>
